@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent  implements OnInit {
+  @Input() search?: string;
 
   constructor() { }
 imageUrl="assets/icon/Vector.png"
 imageUrl1="assets/icon/ri_search-line.png"
   ngOnInit() {}
-
+  
 }

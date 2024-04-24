@@ -8,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class PlayerComponent  implements OnInit {
 
   constructor() { }
-
+ imagurl2="assets/icon/549 1.png";
+ TeamName="Barcelona";
+ Name="Lionel Messi";
+ position="Attack - Right Winger";
+ but="30";
+ imageurl3="assets/icon/Lionel-Messi 1.png";
   ngOnInit() {}
 
 }

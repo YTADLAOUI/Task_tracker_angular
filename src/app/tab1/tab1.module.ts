@@ -8,6 +8,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { HeaderModule } from '../header/header.module';
 import { ButtonModule } from '../button/button.module';
+import { PlayerModule } from '../player/player.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { ButtonModule } from '../button/button.module';
     ExploreContainerComponentModule,
     Tab1PageRoutingModule,
     HeaderModule,
-    ButtonModule
+    ButtonModule,
+    PlayerModule
   
   ],
   declarations: [Tab1Page]
