@@ -1,0 +1,52 @@
+header{
+    padding: 30px;
+}
+main{
+    padding: 30px;
+   
+}
+.container{
+    background-image: linear-gradient(to right, #004382, #2A73B5);
+    border-radius: 8px;
+}
+.player{
+    display: flex;
+    padding: 10px;
+    flex: 1;
+}
+span{
+    margin-right: 3%;
+}
+.position{
+    font-size: small;
+    color: #E98C00;
+    font-weight: 510;
+}
+.name{
+    color: white;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+.details{
+    background-color: rgb(255, 255, 255);
+    padding: 8px ;
+    text-align: center;
+    border-radius: 5px;
+}
+.title{
+    color: #878787;
+}
+.stat{
+    color: #4487CB;
+}
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    padding: 10px;
+    gap: .3em;
+}
+section{
+    text-align: center;
+}
