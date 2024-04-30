@@ -1,17 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <section  class="container">
+    <div class="personal">
+      <p>personal information</p>
+      <hr/>
+    <input type="text" placeholder="name">
+    <input type="number" placeholder="age">
+    <input type="text" placeholder="weight">
+    <input type="text" placeholder="height">
+    <input type="text" placeholder="position">
+    <input type="file" placeholder="img">
+  
+    </div>
+    <div class="details">
+      <p>Details du jouer</p>
+    <hr>
+    <input type="text" placeholder="matches">
+    <input type="number" placeholder="buts">
+    <input type="text" placeholder="assists">
+    </div>
+    <div class="club">
+      <p>club du jour</p>
+    <hr>
+    <input type="text" placeholder="Club Name">
+    <input type="file" placeholder="img">
+    </div>
+  </section>
 </ion-content>
