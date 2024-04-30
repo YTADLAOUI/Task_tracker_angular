@@ -5,6 +5,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import  {FormsModule}  from '@angular/forms';
 import { AppComponent } from './app.component';
+// import { Tab2PageRoutingModule } from './tab2/tab2-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
