@@ -3,13 +3,14 @@
     display: flex;
     border-radius: 15px;
     background-color: #195386;
-    max-width: 400px;
+    // max-width: 400px;
     margin: auto;
     height: 160px;
-    justify-content: center;
+    // justify-content: center;
    .playerInfo{
     
         display: flex;
+        flex: 1;
         padding: .4em .7em;
         flex-direction: column;
         .team{
@@ -44,6 +45,7 @@
    }
    .playerImage{
         display: flex;
+        flex:1;
         justify-content: end;
         .playerImageItem{
             margin-top: auto;
