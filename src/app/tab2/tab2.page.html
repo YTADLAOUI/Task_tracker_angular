@@ -1,28 +1,34 @@
 <ion-content [fullscreen]="true">
-  <section  class="container">
-    <div class="personal">
-      <p>personal information</p>
-      <hr/>
-    <input type="text" placeholder="name">
-    <input type="number" placeholder="age">
-    <input type="text" placeholder="weight">
-    <input type="text" placeholder="height">
-    <input type="text" placeholder="position">
-    <input type="file" placeholder="img">
-  
-    </div>
-    <div class="details">
-      <p>Details du jouer</p>
-    <hr>
-    <input type="text" placeholder="matches">
-    <input type="number" placeholder="buts">
-    <input type="text" placeholder="assists">
-    </div>
-    <div class="club">
-      <p>club du jouer</p>
-    <hr>
-    <input type="text" placeholder="Club Name">
-    <input type="file" placeholder="img">
-    </div>
-  </section>
+  <form [formGroup]="infoPlayer" (ngSubmit)="handelSubmit()">
+
+    <section  class="container">
+      <div class="personal">
+        <p>personal information</p>
+        <hr/>
+      <input type="text"  formControlName="name"  placeholder="name">
+      <input type="number"  formControlName="age" placeholder="age">
+      <input type="text" formControlName="weight" placeholder="weight">
+      <input type="text" formControlName="height" placeholder="height">
+      <input type="text" formControlName="position" placeholder="position">
+      <input type="file" placeholder="img">
+    
+      </div>
+      <div class="details">
+        <p>Details du jouer</p>
+      <hr>
+      <input type="text"  formControlName="matches" placeholder="matches">
+      <input type="number" formControlName="buts" placeholder="buts">
+      <input type="text" formControlName="assists" placeholder="assists">
+      </div>
+      <div class="club">
+        <p>club du jouer</p>
+      <hr>
+      <input type="text" formControlName="clubName" placeholder="Club Name">
+      <input type="file" placeholder="img">
+      </div>
+      <div class="btn-div">
+        <app-button styles="bleu" name="Save" type="submit"></app-button>
+      </div>
+    </section>
+  </form>
 </ion-content>
