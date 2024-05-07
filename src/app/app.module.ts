@@ -5,12 +5,14 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import  {FormsModule}  from '@angular/forms';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-// import { Tab2PageRoutingModule } from './tab2/tab2-routing.module';
+import { StoreModule } from '@ngrx/store';
+import { searchReducer } from './features/search/search.reducer';
+
+
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,StoreModule.forRoot({search: searchReducer})],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
