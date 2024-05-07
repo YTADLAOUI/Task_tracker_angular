@@ -19,7 +19,8 @@ import { PlayerModule } from '../player/player.module';
     Tab1PageRoutingModule,
     HeaderModule,
     ButtonModule,
-    PlayerModule
+    PlayerModule,
+    
   
   ],
   declarations: [Tab1Page]
