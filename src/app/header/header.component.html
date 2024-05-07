@@ -1,6 +1,7 @@
 <header>
   <div class="fram1">
     <div class="info">
+      {{ Search$ | async }}
       <p class="hello">Hello Youssef</p>
       <p class="welcome">Welcome back!</p>
     </div>
@@ -10,6 +11,6 @@
   </div>
   <div class="fram2">
     <!-- <img [src]=imageUrl1/> -->
-    <input  type="text" placeholder="Search Players" [(ngModel)]="search" (ngModelChange)="displayValue()">
+    <input  type="text" placeholder="Search Players" [(ngModel)]="SearchValue" (ngModelChange)="displayValue()">
   </div>
 </header>
