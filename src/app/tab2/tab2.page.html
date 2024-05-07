@@ -1,5 +1,5 @@
 <ion-content [fullscreen]="true">
-  <form [formGroup]="infoPlayer" (ngSubmit)="handelSubmit()">
+  <form [formGroup]="infoPlayer" (ngSubmit)="handelSubmit()" enctype="multipart/form-data">
 
     <section  class="container">
       <div class="personal">
@@ -7,27 +7,27 @@
         <hr/>
       <input type="text"  formControlName="name"  placeholder="name">
       <input type="number"  formControlName="age" placeholder="age">
-      <input type="text" formControlName="weight" placeholder="weight">
-      <input type="text" formControlName="height" placeholder="height">
+      <input type="number" formControlName="weight" placeholder="weight">
+      <input type="number" formControlName="height" placeholder="height">
       <input type="text" formControlName="position" placeholder="position">
-      <input type="file" placeholder="img">
-    
+      <input type="file" placeholder="img" (change)="imageProfiles($event)"  >
+      <input type="file" placeholder="img"  (change)="imagePlayers($event)" >
       </div>
       <div class="details">
         <p>Details du jouer</p>
       <hr>
-      <input type="text"  formControlName="matches" placeholder="matches">
+      <input type="number"  formControlName="matches" placeholder="matches">
       <input type="number" formControlName="buts" placeholder="buts">
-      <input type="text" formControlName="assists" placeholder="assists">
+      <input type="number" formControlName="assists" placeholder="assists">
       </div>
       <div class="club">
         <p>club du jouer</p>
       <hr>
       <input type="text" formControlName="clubName" placeholder="Club Name">
-      <input type="file" placeholder="img">
+      <input type="file" placeholder="img"  (change)="logos($event)" > 
       </div>
       <div class="btn-div">
-        <app-button styles="bleu" name="Save" type="submit"></app-button>
+        <app-button styles="bleu"  name="Save" type="submit"></app-button>
       </div>
     </section>
   </form>
