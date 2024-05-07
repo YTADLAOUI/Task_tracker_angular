@@ -1,15 +1,15 @@
 <ion-content [fullscreen]="true">
     <header>
-        <app-button styles="grey" name="←"></app-button>
+        <app-button styles="grey" name="←" routerLink="/tabs/tab1"></app-button>
     </header>
     <main>
         <div class="container">
             <div class="info">
                 <div class="player">
-                    <span><img [src]=imagurl3 alt="" class="imgPlayer"></span>
+                    <span><img [src]="data.imageProfile" alt="" class="imgPlayer"></span>
                     <div>
-                        <p class="name">Lionel Messi</p>
-                        <p class="position">Attack - Right Winger</p>
+                        <p class="name">{{data.name}}</p>
+                        <p class="position">{{data.position}}</p>
                     </div>
                 </div>
                 <div>
@@ -19,27 +19,27 @@
             <div class="card">
                 <div class="details">
                     <p class="title">matches</p>
-                    <p class="stat">789</p>
+                    <p class="stat">{{data.matches}}</p>
                 </div>
                 <div class="details">
-                    <p class="title">matches</p>
-                    <p class="stat">789</p>
+                    <p class="title">Height</p>
+                    <p class="stat">{{data.height}}</p>
                 </div>
                 <div class="details">
-                    <p class="title">matches</p>
-                    <p class="stat">789</p>
+                    <p class="title">Weight</p>
+                    <p class="stat">{{data.weight}}</p>
                 </div>
                 <div class="details">
-                    <p class="title">matches</p>
-                    <p class="stat">789</p>
+                    <p class="title">Goal</p>
+                    <p class="stat">{{data.buts}}</p>
                 </div>
                 <div class="details">
-                    <p class="title">matches</p>
-                    <p class="stat">789</p>
+                    <p class="title">Assists</p>
+                    <p class="stat">{{data.assists}}</p>
                 </div>
                 <div class="details">
-                    <p class="title">matches</p>
-                    <p class="stat">789</p>
+                    <p class="title">SPR</p>
+                    <p class="stat">82</p>
                 </div>
             </div>
         </div>
