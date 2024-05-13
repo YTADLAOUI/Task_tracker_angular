@@ -7,12 +7,12 @@ import  {FormsModule}  from '@angular/forms';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { searchReducer } from './features/search/search.reducer';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,StoreModule.forRoot({search: searchReducer})],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,StoreModule.forRoot({search: searchReducer}),BrowserAnimationsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

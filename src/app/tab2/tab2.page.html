@@ -1,33 +1,112 @@
 <ion-content [fullscreen]="true">
-  <form [formGroup]="infoPlayer" (ngSubmit)="handelSubmit()" enctype="multipart/form-data">
+  <form [formGroup]="infoPlayer" (ngSubmit)="handelSubmit()" enctype="multipart/form-data" novalidate>
 
     <section  class="container">
       <div class="personal">
         <p>personal information</p>
         <hr/>
       <input type="text"  formControlName="name"  placeholder="name">
+      @if(infoPlayer.get('name')?.touched &&
+      infoPlayer.get('name')?.hasError('required')) {
+      <span color="danger">
+        <p class="validationError">name is required</p>
+      </span>
+      }
+      @if(infoPlayer.get('name')?.touched &&
+      infoPlayer.get('name')?.hasError('minlength')) {
+      <span color="danger">
+        <p class="validationError">length more then 3 caractere </p>
+      </span>
+      }
       <input type="number"  formControlName="age" placeholder="age">
+      @if(infoPlayer.get('age')?.touched &&
+      infoPlayer.get('age')?.hasError('required')) {
+      <span color="danger">
+        <p class="validationError">age is required</p>
+      </span>
+      }
+      
       <input type="number" formControlName="weight" placeholder="weight">
+      @if(infoPlayer.get('weight')?.touched &&
+      infoPlayer.get('weight')?.hasError('required')) {
+      <span color="danger">
+        <p class="validationError">weight is required</p>
+      </span>
+      }
       <input type="number" formControlName="height" placeholder="height">
+      @if(infoPlayer.get('height')?.touched &&
+      infoPlayer.get('height')?.hasError('required')) {
+      <span color="danger">
+        <p class="validationError">height is required</p>
+      </span>
+      }
       <input type="text" formControlName="position" placeholder="position">
-      <input type="file" placeholder="img" (change)="imageProfiles($event)"  >
-      <input type="file" placeholder="img"  (change)="imagePlayers($event)" >
+      @if(infoPlayer.get('position')?.touched &&
+      infoPlayer.get('position')?.hasError('required')) {
+      <span color="danger">
+        <p class="validationError">position is required</p>
+      </span>
+      }
+      <div class="input-group custom-file-button">
+        <label class="input-group-text" for="inputGroupFileimageProfiles">imageProfiles</label>
+        <input type="file" class="form-control" id="inputGroupFileimageProfiles" style="
+        width: 100%;"  (change)="imageProfiles($event)">
+      </div>
+      <div class="input-group custom-file-button">
+        <label class="input-group-text" for="inputGroupFileimagePlayers">imagePlayers</label>
+        <input type="file" class="form-control" id="inputGroupFileimagePlayers" style="
+        width: 100%;" (change)="imagePlayers($event)">
+      </div>
+      <!-- <input type="file" placeholder="img"  (change)="imageProfiles($event)"  required>
+      <input type="file" placeholder="img"  (change)="imagePlayers($event)" required> -->
+      
       </div>
       <div class="details">
         <p>Details du jouer</p>
       <hr>
       <input type="number"  formControlName="matches" placeholder="matches">
+      @if(infoPlayer.get('matches')?.touched &&
+      infoPlayer.get('matches')?.hasError('required')) {
+      <span color="danger">
+        <p class="validationError">matches is required</p>
+      </span>
+      }
       <input type="number" formControlName="buts" placeholder="buts">
+      @if(infoPlayer.get('buts')?.touched &&
+      infoPlayer.get('buts')?.hasError('required')) {
+      <span color="danger">
+        <p class="validationError">buts is required</p>
+      </span>
+      }
       <input type="number" formControlName="assists" placeholder="assists">
+      @if(infoPlayer.get('assists')?.touched &&
+      infoPlayer.get('assists')?.hasError('required')) {
+      <span color="danger">
+        <p class="validationError">assists is required</p>
+      </span>
+      }
       </div>
       <div class="club">
         <p>club du jouer</p>
       <hr>
       <input type="text" formControlName="clubName" placeholder="Club Name">
-      <input type="file" placeholder="img"  (change)="logos($event)" > 
+      @if(infoPlayer.get('clubName')?.touched &&
+      infoPlayer.get('clubName')?.hasError('required')) {
+      <span color="danger">
+        <p class="validationError">clubName is required</p>
+      </span>
+      }
+      <!-- <input type="file" placeholder="img"  (change)="logos($event)" required>  -->
+      <div class="input-group custom-file-button">
+        <label class="input-group-text" for="inputGroupFilelogo">logo</label>
+        <input type="file" class="form-control" id="inputGroupFilelogo" style="
+        width: 100%;" (change)="logos($event)">
+      </div>
       </div>
       <div class="btn-div">
+        <p-toast></p-toast>
         <app-button styles="bleu"  name="Save" type="submit"></app-button>
+        <!-- <button pButton name="Save" type="submit" label="show toast"></button> -->
       </div>
     </section>
   </form>

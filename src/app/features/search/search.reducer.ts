@@ -7,5 +7,7 @@ export const initialState = '';
 
 export const searchReducer = createReducer(
   initialState,
-  on(getSearch, state => state)
+  on(getSearch, (state, action) => {
+    return action.search;
+  }),
 );

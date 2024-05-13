@@ -1,13 +1,15 @@
-input{
+
+input {
     width: 90%;
     box-sizing: border-box;
     border: none;
-    border-radius: 10px;
+    // border-radius:0 10px 10px 0;
     font-size: 12px;
     background-color: white;
     margin-bottom: .8em;
     padding: 12px 20px 12px 40px;
-    background-color: rgba(236, 236, 236, 0.67)
+    background-color: rgba(236, 236, 236, 0.67);
+    border-radius: 10px;
   }
   .container{
     margin: 2%;
@@ -41,4 +43,41 @@ input{
     display: flex;
     justify-content: center;
     margin-top: 1em;
+  }
+  .validationError{
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .custom-file-button {
+    width: 90%;
+    display: flex;
+    
+    input[type="file"] {
+      
+      margin-left: -2px !important;
+  
+      &::-webkit-file-upload-button {
+        display: none;
+      }
+      &::file-selector-button {
+        display: none;
+      }
+    }
+      label {
+        background-color: rgb(241, 240, 240);
+        cursor: pointer;
+        display: flex;
+        padding: 12px;
+        margin-bottom: 10px;
+        border-radius:10px 0px 0 10px;
+        font-size: 12px;
+        align-items: center;
+        border: 1px solid #ccc;
+      }
+      input{
+        border-radius: 0px 10px 10px 0px;
+      }
+
   }

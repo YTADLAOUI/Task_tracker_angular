@@ -35,6 +35,7 @@
     "cloudinary-angular": "^1.0.1",
     "cloudinary-core": "^2.13.1",
     "ionicons": "^7.0.0",
+    "primeng": "^17.16.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "v": "^0.3.0",
