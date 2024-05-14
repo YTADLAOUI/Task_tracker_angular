@@ -12,7 +12,7 @@ To get a local copy up and running, follow these simple steps.
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/YTADLAOUI/blogger-with-nestjs-reactjs.git](https://github.com/YTADLAOUI/lists_players_angular.git
+    git clone https://github.com/YTADLAOUI/lists_players_angular.git
     ```
 2. Navigate to the project directory:
    ```bash
