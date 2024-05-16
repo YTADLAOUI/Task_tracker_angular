@@ -1,18 +1,18 @@
-@for( player of data ; track player) {
-<div class="card" routerLink="/tabs/{{player.id}}">
-  <div class="playerInfo">
-    <span class="team">
-      <img class="teamImageItem" [src]="imagurl2" alt="">
-      <p class="TeamName">{{player.club?.name}}</p>
-    </span>
-    <div>
-      <p class="name">{{player.name}}</p>
-      <p class="position">{{player.position}}</p>
+@for( player of data  ; track player) {
+  <div class="card" routerLink="/tabs/{{player.id}}">
+    <div class="playerInfo">
+      <span class="team">
+        <img class="teamImageItem" [src]="imagurl2" alt="">
+        <p class="TeamName">{{player.club.name}}</p>
+      </span>
+      <div>
+        <p class="name">{{player.name}}</p>
+        <p class="position">{{player.position}}</p>
+      </div>
+      <p class="but">{{player.buts}}</p>
     </div>
-    <p class="but">{{player.buts}}</p>
+    <div class="playerImage">
+      <img class="playerImageItem" [src]="player.imagePlayer" >
+    </div>
   </div>
-  <div class="playerImage">
-    <img class="playerImageItem" [src]="player.imagePlayer" >
-  </div>
-</div>
-}
+  }

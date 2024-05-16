@@ -9,6 +9,7 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { HeaderModule } from '../header/header.module';
 import { ButtonModule } from '../button/button.module';
 import { PlayerModule } from '../player/player.module';
+import { Tab1Service } from './tab1.service';
 
 @NgModule({
   imports: [
@@ -21,8 +22,8 @@ import { PlayerModule } from '../player/player.module';
     ButtonModule,
     PlayerModule,
     
-  
   ],
-  declarations: [Tab1Page]
+  declarations: [Tab1Page],
+  providers:[Tab1Service],
 })
 export class Tab1PageModule {}

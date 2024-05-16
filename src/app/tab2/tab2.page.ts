@@ -52,6 +52,7 @@ export class Tab2Page implements OnInit , OnDestroy {
     })
   };
   ngOnInit() {
+    console.log("hello");
   }
   handelSubmit(){
   const formData = new FormData();
